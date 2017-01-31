@@ -1,0 +1,13 @@
+
+#weather-form {
+    max-width: 400px;
+}
+
+.weather-card {
+    height:300px;
+    width: 400px;
+}
+
+h5 {
+    text-align: center;
+}

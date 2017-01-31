@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng" yahoo:count="1" yahoo:created="2017-01-18T01:42:09Z" yahoo:lang="en-US"><results><channel><yweather:units xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" distance="mi" pressure="in" speed="mph" temperature="F"/><title>Yahoo! Weather - Halifax, NS, CA</title><link>http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-4177/</link><description>Yahoo! Weather for Halifax, NS, CA</description><language>en-us</language><lastBuildDate>Tue, 17 Jan 2017 09:42 PM AST</lastBuildDate><ttl>60</ttl><yweather:location xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" city="Halifax" country="Canada" region=" NS"/><yweather:wind xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" chill="7" direction="0" speed="14"/><yweather:atmosphere xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" humidity="65" pressure="1020.0" rising="0" visibility="16.1"/><yweather:astronomy xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" sunrise="7:47 am" sunset="5:3 pm"/><image><title>Yahoo! Weather</title><width>142</width><height>18</height><link>http://weather.yahoo.com</link><url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url></image><item><title>Conditions for Halifax, NS, CA at 09:00 PM AST</title><geo:lat xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">44.642078</geo:lat><geo:long xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">-63.620571</geo:long><link>http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-4177/</link><pubDate>Tue, 17 Jan 2017 09:00 PM AST</pubDate><yweather:condition xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="33" date="Tue, 17 Jan 2017 09:00 PM AST" temp="17" text="Mostly Clear"/><yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="34" date="17 Jan 2017" day="Tue" high="33" low="15" text="Mostly Sunny"/><yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="28" date="18 Jan 2017" day="Wed" high="28" low="16" text="Mostly Cloudy"/><yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="26" date="19 Jan 2017" day="Thu" high="35" low="26" text="Cloudy"/><yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="28" date="20 Jan 2017" day="Fri" high="33" low="24" text="Mostly Cloudy"/><yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="28" date="21 Jan 2017" day="Sat" high="35" low="22" text="Mostly Cloudy"/><yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="28" date="22 Jan 2017" day="Sun" high="29" low="19" text="Mostly Cloudy"/><yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="34" date="23 Jan 2017" day="Mon" high="31" low="16" text="Mostly Sunny"/><yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="26" date="24 Jan 2017" day="Tue" high="33" low="17" text="Cloudy"/><yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="39" date="25 Jan 2017" day="Wed" high="48" low="34" text="Scattered Showers"/><yweather:forecast xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" code="39" date="26 Jan 2017" day="Thu" high="49" low="39" text="Scattered Showers"/><description>&lt;![CDATA[&lt;img src="http://l.yimg.com/a/i/us/we/52/33.gif"/&gt;
+&lt;BR /&gt;
+&lt;b&gt;Current Conditions:&lt;/b&gt;
+&lt;BR /&gt;Mostly Clear
+&lt;BR /&gt;
+&lt;BR /&gt;
+&lt;b&gt;Forecast:&lt;/b&gt;
+&lt;BR /&gt; Tue - Mostly Sunny. High: 33Low: 15
+&lt;BR /&gt; Wed - Mostly Cloudy. High: 28Low: 16
+&lt;BR /&gt; Thu - Cloudy. High: 35Low: 26
+&lt;BR /&gt; Fri - Mostly Cloudy. High: 33Low: 24
+&lt;BR /&gt; Sat - Mostly Cloudy. High: 35Low: 22
+&lt;BR /&gt;
+&lt;BR /&gt;
+&lt;a href="http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-4177/"&gt;Full Forecast at Yahoo! Weather&lt;/a&gt;
+&lt;BR /&gt;
+&lt;BR /&gt;
+(provided by &lt;a href="http://www.weather.com" &gt;The Weather Channel&lt;/a&gt;)
+&lt;BR /&gt;
+]]&gt;</description><guid isPermaLink="false"/></item></channel></results></query><!-- total: 2063 -->
+<!-- prod_bf1_1;paas.yql;queryyahooapiscomproductionbf1;d04b836e-dbfc-11e6-940f-d4ae52974741 -->

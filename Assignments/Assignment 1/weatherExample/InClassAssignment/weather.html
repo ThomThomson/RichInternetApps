@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Weather App</title>   
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <link rel="stylesheet" href="css/weather-icons.css">
+        <link rel="stylesheet" href="css/weather.css">
+    </head>
+    <body>
+        <h1>My JavaScript Weather App</h1>
+        <div class="w3-container w3-card-4" id="weather-form">
+          <h2 class="w3-text-green">Your Location</h2>
+          <p>Enter City and State/Province</p>
+          <p>      
+            <label class="w3-text-green"><b>City</b></label>
+            <input class="w3-input w3-border" id="city" type="text">
+          </p>
+          <p>      
+              <label class="w3-text-green"><b>State</b></label>
+              <input class="w3-input w3-border" id="state" type="text">
+          </p>
+          <p>      
+              <button class="w3-btn w3-green" 
+                      onclick="displayWeather();">Look Up</button>
+          </p>
+        </div>
+        <!-- Weather Display -->
+        <div class="w3-row w3-margin-top">
+            <div class="w3-third" id="day0" style="display: none;">
+                <!-- day0 -->
+            </div>
+            <div class="w3-third" id="day1" style="display: none;">
+                <!-- day1 -->
+            </div>
+            <div class="w3-third"id="day2" style="display: none;">
+                <!-- day2-->
+            </div>
+        </div>
+        
+        <script src="weather.js"></script>
+    </body>
+</html>
