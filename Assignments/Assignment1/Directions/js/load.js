@@ -4,6 +4,7 @@ var destination;
 var directionsHTML = '';
 var date;
 var datebox;
+var directionsArea;
 
 function currentTime() {//F U N C T I O N currentTime sets the time on load of the page.
   date = new Date();
@@ -12,6 +13,7 @@ function currentTime() {//F U N C T I O N currentTime sets the time on load of t
   var timeString = hours + ":" + minutes;
   datebox = document.getElementById("leaveTime");
   datebox.value = timeString;
+  directionsArea = document.getElementById('directionsTable');
 }
 
 function prepareTableRow(step){//F U N C T I O N prepareTableRow creates the html string out of the raw data.
@@ -31,22 +33,20 @@ function loadData(xml) {//F U N C T I O N loadData is called by the xhttp object
   for (step = 0; step < steps.length; step++) {
     directionsHTML += prepareTableRow(steps[step]) //M A K E a table row for each S T E P                      
   }
-  directionsArea = document.getElementById('directionsTable');
   directionsArea.innerHTML = directionsHTML;
 }
 
 function populateDirections() {//F U N C T I O N populateDirections is called by the form button. It queries Google's API for the directions.
-  start = document.getElementById("start").value;
-  destination = document.getElementById("destination").value;
+  start = document.getElementById("start");
+  destination = document.getElementById("destination");
+  if(!start.checkValidity() || !destination.checkValidity()){ return; }
+  start = start.value; destination = destination.value;
   var leaveTime = Math.floor((date.getTime() + ((datebox.value.split(':')[0] - date.getHours()) * 3600000) + ((datebox.value.split(':')[1] - date.getMinutes()) * 60000)) / 1000);
   var xmlLink = "https://maps.googleapis.com/maps/api/directions/xml?origin=" + start + "&destination=" + destination + "&mode=transit&arrival_time=" + leaveTime + "&key=" + apiKey;
   var xhttp = new XMLHttpRequest();
-  xhttp.onload = function () {
-    if (this.status === 200) {loadData(this); }
-  };
-  xhttp.onerror = function (err) {
-    alert("Error loading direction data" + err);
-  };
+  xhttp.onload = function () {if (this.status === 200) { loadData(this); }};
+  xhttp.onerror = function (err) { alert("Error loading direction data" + err); };
+  xhttp.onloadstart = function () { directionsArea.innerHTML = "<i class='fa fa-circle-o-notch fa-spin' style='font-size:50px;text-align:center'></i>"; }
   xhttp.open("GET", xmlLink, true);
   xhttp.send();
 }
