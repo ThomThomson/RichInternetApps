@@ -8,12 +8,12 @@
     <title>ThreeNoteFiveMe</title>
 
     <!-- C S S  L I N K S-->
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/ThreeNote.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
     <link href="css/metisMenu.min.css" rel="stylesheet">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"  rel="stylesheet"  type='text/css'>
-
   </head>
     
   <body>
@@ -29,15 +29,16 @@
           <a class="navbar-brand" href="index.html">3Note5Me <div id="signin"></div></a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><i class="fa fa-pencil"></i></a></li>
-          <li><a href="#"><i class="fa fa-save"></i></a></li>
-          <li><a href="#"><i class="fa fa-plus-circle"></i></a></li>
+          <li><a href="javascript:editNote())"><i class="fa fa-pencil"></i></a></li>
+          <li><a href="javascript:saveNote()"><i class="fa fa-save"></i></a></li>
+          <li><a href="javascript:addaNote()"><i class="fa fa-plus-circle"></i></a></li>
+          <li><a href="javascript:delNote()"><i class="fa fa-trash"></i></a></li>
           <li>
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
               <i class="fa fa-question-circle"></i><i class="fa fa-caret-down"></i>
             </a>
             <div class="dropdown-menu">
-              <a>About</a>
+              <ul><li><a href="javascript:about()">About</a></li></ul>
             </div>
           </li>
         </ul>
@@ -46,33 +47,64 @@
       
     
       <!-- S I D E B A R -->
-      <div class="col-sm-2">
-        <div class="navbar-default sidebar" role="navigation">
-          <div class="sidebar-nav navbar-collapse">
-            <ul class="nav notesList" id="side-menu">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+              <ul class="nav notesList" id="side-menu">
                 <li class="sidebar-search">
                   <div class="input-group custom-search-form">
-                      <input type="text" class="form-control" placeholder="Search...">
-                      <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">
-                          <i class="fa fa-search"></i>
-                      </button>
-                  </span>
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    </span>
                   </div>
                 </li>
-                <!-- P U T  L I N K S  H E R E -->
-            </ul>
+                  <!-- P U T  L I N K S  H E R E -->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="currentNoteTitle">
+            <span>Current Note</span>
+          </div>
+          <div class="tinyMCEarea">
+            
           </div>
         </div>
       </div>
       <!-- E N D  S I D E B A R -->
     
+      <!-- dialogs -->
+      <div class="application hidden">
+        <div id="about-dialog" title="About TwoNote">
+          <p>© 2017 Devon Thomson</p>
+          <p>This thing is just... 3Note... 5Me</p>
+        </div>
+        <div id="save-dialog" title="Saved">
+        </div>
+        <div id="add-dialog" title="Name New Note">
+          <input type="text" id="note-name" placeholder="Note Name">
+        </div>
+        <div id="delete-dialog" title="Delete Note?">
+          <p>Delete this Note?</p>
+        </div>
+      </div>
+    
       <!-- S C R I P T  L I N K S -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
       <script src="https://js.live.net/v5.0/wl.js"></script>
-      <script type="text/javascript" src="js/constants.js"></script>
-      <script type="text/javascript" src="js/script.js"></script>  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.5.3/tinymce.min.js"></script>
       <script type="text/javascript" src="js/metisMenu.min.js"></script>  
+      <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
+      <!-- MY SCRIPTS -->
+      <script type="text/javascript" src="js/constants.js"></script>
+      <script type="text/javascript" src="js/dialogs.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+      
   </body>
 </html>
