@@ -143,27 +143,38 @@ function deleteNote(){
 //F U N C T I O N  saveNote
 function saveNote(){
   if(currentIndex < noteIds.length){//if it's not a new note
+    
     //UPDATING
     if(unsavedContent != originalContent){
       var updatedNote = formUpdateJSON();
+      var url = 'https://www.onenote.com/api/v1.0/me/notes/pages/' + noteIds[currentIndex] + '/content';
       $.ajax({
-        url: `https://www.onenote.com/api/v1.0/me/notes/pages/${noteIds[currentIndex]}/content?preAuthenticated=true`,
-        type: "PATCH",
-        data: updatedNote,
+        url: url,
+        method: "PATCH",
+        data: "[{"+
+        "'target': '#_default',"+
+        "'action': 'replace'," +
+        "'content': '" + unsavedContent + "'"+
+        "}]",
         contentType: "application/json",
-        beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);},
-        Accept: "application/json",
+        headers: {
+          'Authorization': 'Bearer ' + accessToken,
+          'Content-Type': 'application/json',
+        },
+        //Accept: "application/json",
         success: function(data) { 
           alert("saved");
           onLogin(sess);
         },
-        error: function(){
+        error: function(err){
           alert("failure to save changes");
+          debugger;
         }
       }); 
     }
   }
   else{
+    
     //ADDING
    if(unsavedContent != originalContent && unsavedContent != undefined){
       var createdNote = formNoteHTML();
@@ -199,12 +210,12 @@ function addNote(){
 }//E N D  F U N C T I O N addNote
 
 function formUpdateJSON(){
-  var updates ={
-    'target' : noteIds[currentIndex],
+  return [{
+    'target' : '#_default',
     'action' : 'replace',
-    'content' : unsavedContent
-  };
-  return JSON.stringify(updates);
+    'content' : "<p>UnsavedContent</p>"
+  }];
+  //return JSON.stringify(updates);
 }
 
 function about(){
