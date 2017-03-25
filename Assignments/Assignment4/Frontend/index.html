@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>3Blog5Me</title>
+
+  <!-- CSS f i l e s  -->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="css/clean-blog.css" rel="stylesheet">
+  <link href="css/spinner.css" rel="stylesheet">
+
+  <!-- f o n t s -->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- N a v i g a t i o n -->
+  <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          Menu <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand" href="index.html">3Blog5Me</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+  </nav>
+
+  <!-- H e a d e r -->
+  <header class="intro-header" style="background-image: url('img/home-bg.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div class="site-heading">
+            <h1>3Blog5Me</h1>
+            <hr class="small">
+            <span class="subheading">This blog is 3 Blog 5 me. We hope it will be 3 blog 5 you too.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- L o a d e r -->
+  <div id="spinner" class="sk-folding-cube hidden" style="position:fixed; top:50%; left:50%;">
+    <div class="sk-cube1 sk-cube"></div>
+    <div class="sk-cube2 sk-cube"></div>
+    <div class="sk-cube4 sk-cube"></div>
+    <div class="sk-cube3 sk-cube"></div>
+  </div>
+
+    
+    <div class="container">
+      <div class="row">
+        
+      </div>
+        <a href="javascript:showAddPanel()" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Add new post</a>
+      <div class="row">
+        <!--f o r m -->
+        <div id="formPanel" class="col-sm-4" style="display:none;">
+          <form>
+             <div class="form-group">
+               <label for="titleBox">Title</label>
+                <input type="email" class="form-control" id="titleBox" aria-describedby="titleHelp" placeholder="Enter a title">
+                <small id="titleHelp" class="form-text text-muted">Choose a short, descriptive title for your blog post</small>
+              </div>
+            <div class="form-group">
+              <label for="bodyArea">Body</label>
+              <textarea class="form-control" id="bodyArea" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <a href="javascript:submit()" class="btn"><span class="glyphicon glyphicon-ok"></span> Submit Changes</a>
+              <a href="javascript:cancelAddOrEdit()" class="btn"><span class="glyphicon glyphicon-remove"></span> Cancel Changes</a>
+            </div>
+          </form>
+        </div>
+        
+        <div id="postsHere" class="col-sm-8 col-sm-offset-4">
+          <!-- I n s e r t  c o n t e n t  b e l o w -->
+          
+          
+          
+          <!-- E n d  p o s t s  c o n t e n t -->
+        </div>
+        
+      </div>
+    </div>
+
+    <hr>
+    
+    <!-- D i a l o g s -->
+    
+  
+  
+    <!-- F o o t e r -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <ul class="list-inline text-center">
+              <li>
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; 5 me inc 2017</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- j q u e r y -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/clean-blog.min.js"></script>
+    <script src="js/3blog5me.js"></script>
+
+</body>
+
+</html>
